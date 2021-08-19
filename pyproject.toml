@@ -2,12 +2,11 @@
 name = "repl_python3_ugg-bot"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["YiYang02 <<>>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-discord = "^1.7.3"
-selenium = "^3.141.0"
+Flask = "^2.0.1"
 
 [tool.poetry.dev-dependencies]
 

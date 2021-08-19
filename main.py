@@ -2,6 +2,7 @@ import discord
 import os
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from keep_alive import keep_alive
 
 # Constant Variables
 GAMEMODES = set(["normals", "aram"])
@@ -79,7 +80,8 @@ async def on_message(message):
       await message.channel.send("Tier: " + tier)
       await message.channel.send(file=discord.File(PNG_PATH))
 
-      
+# Makes sure our bot is constantly up
+keep_alive()
 # Makes sure no one can get the token for my bot
 client.run(os.environ['DISCORD_TOKEN'])
 
